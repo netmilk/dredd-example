@@ -17,7 +17,7 @@ app.use (req, res, next) ->
 app.post '/machines', (req, res) ->
   console.log "BODY: " + JSON.stringify(req.body)
   if db('test.machines').insert req.body
-    res.send 202 , {'message': 'Accepted'}
+    res.send 410 , {'message': 'Accepted'}
   else
     res.send 500
 
